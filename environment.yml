@@ -1,0 +1,9 @@
+name: netket
+
+dependencies:
+  - python
+  - pip
+  - jupyter
+  - black
+  - pip:
+    - netket
