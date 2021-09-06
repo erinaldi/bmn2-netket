@@ -21,3 +21,5 @@ conda activate netket
 
 The [MatrixModel.ipynb](./notebooks/MatrixModel.ipynb) notebooks is an introduction to using `netket` for finding the variational ground state of a bosonic matrix model using a neural state ansatz and a variational Monte Carlo sampler for states in a Fock basis.
 The simpler case of zero coupling constant is shown in [HarmonicOscillators.ipynb](./notebooks/HarmonicOscillators.ipynb).
+
+You can run the notebooks on Google Colaboratory: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/erinaldi/bmn2-netket/blob/main/notebooks/MatrixModel.ipynb)
