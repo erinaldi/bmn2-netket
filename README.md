@@ -16,7 +16,7 @@ conda env create -f environment.yml
 conda activate netket
 ```
 
-**Note**: `netket` is isntalled in the environment using `pip`. The installation is for a single CPU (no MPI installation is needed).
+**Note**: `netket` is installed in the environment using `pip`. The installation is for a single CPU (no MPI installation is needed).
 # Notebooks
 
 The [MatrixModel.ipynb](./notebooks/MatrixModel.ipynb) notebooks is an introduction to using `netket` for finding the variational ground state of a bosonic matrix model using a neural state ansatz and a variational Monte Carlo sampler for states in a Fock basis.
