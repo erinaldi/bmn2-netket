@@ -23,3 +23,6 @@ The [MatrixModel.ipynb](./notebooks/MatrixModel.ipynb) notebooks is an introduct
 The simpler case of zero coupling constant is shown in [HarmonicOscillators.ipynb](./notebooks/HarmonicOscillators.ipynb).
 
 You can run the notebooks on Google Colaboratory: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/erinaldi/bmn2-netket/blob/main/notebooks/MatrixModel.ipynb)
+
+The variational energy of the ground state as a function of the optimization process is shown below for two neural state ansatz
+![energy figure](figures/energy_vs_iterations.png)
