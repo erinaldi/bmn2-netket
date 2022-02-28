@@ -1,0 +1,14 @@
+name: netket-mpi
+
+channels:
+  - conda-forge
+ 
+dependencies:
+  - python
+  - pip
+  - jupyter
+  - black
+  - mpi4py
+  - pip:
+    - "netket[mpi]"
+    
