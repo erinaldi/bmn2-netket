@@ -4,7 +4,7 @@ Find the ground state of matrix models using variational neural states in [`netk
 
 This repository depends on the `netket` library (v3.0).
 
-We included a notebook based on the nice `Introduction to Netket 3.0` tutorial at [this link](https://www.netket.org/tutorials/netket3.html).
+We included a notebook based on the nice `Ground-State: Ising model` tutorial by Filippo Vicentini at [this link](https://netket.readthedocs.io/en/latest/tutorials/gs-ising.html).
 
 # Install
 
@@ -16,7 +16,8 @@ conda env create -f environment.yml
 conda activate netket
 ```
 
-**Note**: `netket` is installed in the environment using `pip`. The installation is for a single CPU (no MPI installation is needed).
+**Note**: `netket` is installed in the environment using `pip`. The installation is for a single CPU (If you need a MPI installation use `environment.yml` but me mindful that the MPI dependency `mpi4py` is installed via `conda`, despite all the [warnings](https://netket.readthedocs.io/en/latest/docs/install.html#mpi) from the NetKet team).
+
 # Notebooks
 
 The [MatrixModel.ipynb](./notebooks/MatrixModel.ipynb) notebooks is an introduction to using `netket` for finding the variational ground state of a bosonic matrix model using a neural state ansatz and a variational Monte Carlo sampler for states in a Fock basis.
