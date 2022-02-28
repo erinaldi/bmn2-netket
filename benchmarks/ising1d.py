@@ -53,4 +53,7 @@ def main():
 
 if __name__ == "__main__":
     # run this like this: mpirun -np 4 python benchmarks/ising1d.py
+    # without MPI: 38 it/s from the progress bar
+    # with MPI np=2: 48 it/s
+    # with MPI np=4: 65 it/s
     main()
