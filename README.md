@@ -16,7 +16,11 @@ conda env create -f environment.yml
 conda activate netket
 ```
 
-**Note**: `netket` is installed in the environment using `pip`. The installation is for a single CPU (If you need a MPI installation use `environment.yml` but me mindful that the MPI dependency `mpi4py` is installed via `conda`, despite all the [warnings](https://netket.readthedocs.io/en/latest/docs/install.html#mpi) from the NetKet team).
+**Note**: `netket` is installed in the environment using `pip`. The installation is for a single CPU.
+
+* If you need a MPI installation use `environment_mpi.yml` but me mindful that the MPI dependency `mpi4py` is installed via `conda`, despite all the [warnings](https://netket.readthedocs.io/en/latest/docs/install.html#mpi) from the NetKet team).
+ 
+* If you need a GPU installation use `environment_gpu.yml` which is installing JAX [with GPU support](https://netket.readthedocs.io/en/latest/docs/install.html#gpu-support) before installing `netket`.
 
 # Notebooks
 
