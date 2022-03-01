@@ -36,7 +36,7 @@ def main():
     # Create an instance of the model. 
     mf_model = MF()
     # Create the local sampler on the hilbert space
-    sampler = nk.sampler.MetropolisLocal(hi)
+    sampler = nk.sampler.MetropolisLocal(hi, n_chains=4)
     # Construct the variational state using the model and the sampler above.
     vstate = nk.vqs.MCState(sampler, mf_model, n_samples=2**10)
     # optimizer
@@ -53,7 +53,7 @@ def main():
 
 if __name__ == "__main__":
     # run this like this: mpirun -np 4 python benchmarks/ising1d.py
-    # without MPI: 38 it/s from the progress bar
-    # with MPI np=2: 48 it/s
-    # with MPI np=4: 65 it/s
+    # without MPI: 38 it/s from the progress bar (50 it/s with n_chains=4)
+    # with MPI np=2: 48 it/s (66 it/s with n_chains=4)
+    # with MPI np=4: 65 it/s (120 it/s with n_chains=4)
     main()
