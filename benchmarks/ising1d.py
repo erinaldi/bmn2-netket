@@ -28,10 +28,10 @@ def main():
     H += sum([V*sigmaz(hi,i)*sigmaz(hi,(i+1)%N) for i in range(N)])
 
     # sparse exact hamiltonian matrix elements
-    sp_h=H.to_sparse()
-    eig_vals, eig_vecs = eigsh(sp_h, k=2, which="SA")
-    if nk.utils.mpi.rank == 0:
-        print("eigenvalues with scipy sparse:", eig_vals)
+    # sp_h=H.to_sparse()
+    # eig_vals, eig_vecs = eigsh(sp_h, k=2, which="SA")
+    # if nk.utils.mpi.rank == 0:
+    #     print("eigenvalues with scipy sparse:", eig_vals)
 
     # Create an instance of the model. 
     mf_model = MF()
@@ -46,14 +46,15 @@ def main():
     # run the driver for 300 iterations. This will display a progress bar
     gs.run(n_iter=300)
     mf_energy=vstate.expect(H)
-    error=abs((mf_energy.mean-eig_vals[0])/eig_vals[0])
+    # error=abs((mf_energy.mean-eig_vals[0])/eig_vals[0])
     if nk.utils.mpi.rank == 0:
-        print("Optimized energy and relative error: ",mf_energy,error)
+        # print("Optimized energy and relative error (compared to sparse ED): ",mf_energy,error)
+        print("Optimized energy with mean field ansatz: ",mf_energy)
 
 
 if __name__ == "__main__":
     # run this like this: mpirun -np 4 python benchmarks/ising1d.py
-    # without MPI: 38 it/s from the progress bar (50 it/s with n_chains=4)
+    # without MPI: 38 it/s from the progress bar (45-50 it/s with n_chains=4)
     # with MPI np=2: 48 it/s (66 it/s with n_chains=4)
     # with MPI np=4: 65 it/s (120 it/s with n_chains=4)
     main()
